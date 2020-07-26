@@ -1,0 +1,420 @@
+/* /////////////////
+обгортка для слайдів
+///////////////// */
+
+#levus-slider {
+    height: 530px;
+    position: relative;
+    overflow: hidden;
+    background: var(--black);
+}
+
+
+/* //////////////
+  кнопки управління
+  ////////////// */
+
+#levus-left,
+#levus-right {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    /* border: 30px solid; */
+    cursor: pointer;
+    z-index: 3;
+    opacity: .5;
+    width: 40px;
+    height: 40px;
+    background: var(--light);
+    border-radius: 40px;
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+}
+
+#levus-left:hover,
+#levus-right:hover {
+    opacity: 1;
+}
+
+
+/* вліво */
+
+#levus-left {
+    left: 50px;
+}
+
+@media(max-width: 776px) {
+    #levus-left {
+        display: none;
+    }
+}
+
+
+/* вліво */
+
+#levus-left::before {
+    content: '';
+    height: 16px;
+    width: 16px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -8px auto auto -8px;
+    z-index: 4;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAARElEQVR4Ae3OAQYAIBQE0Y/u21H2IB2yYEGAFEvzGACmAADvdRczM12PmXEjbaYxwwwzh7QNqez3KaaYYkoVQu4GAMACdpNBa8xOosUAAAAASUVORK5CYII=') center center no-repeat;
+}
+
+
+/* вправо */
+
+#levus-right {
+    right: 50px;
+}
+
+@media(max-width: 776px) {
+    #levus-right {
+        display: none;
+    }
+}
+
+#levus-right::before {
+    content: '';
+    height: 16px;
+    width: 16px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -8px auto auto -8px;
+    z-index: 4;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAS0lEQVR4Ae3OsQ0AEBQGYYXSrkZ5gxjDYJA8jVKIv7gvuf4CAOCe7MnMNE9iqo6a0lRiiimmPoijsg0ZM8wwc0hqZjKlmcU8AMBLHcNiQx9bPHBBAAAAAElFTkSuQmCC') center center no-repeat;
+}
+
+#levus-left.hide {
+    -webkit-transform: translateX(-150px);
+    transform: translateX(-150px);
+}
+
+#levus-right.hide {
+    -webkit-transform: translateX(150px);
+    transform: translateX(150px);
+}
+
+
+/* ///
+  слайд 
+  /// */
+
+
+/* прихований по дефолту */
+
+#levus-slider article {
+    background-size: cover !important;
+    background-position: center !important;
+    height: 530px;
+    width: 100%;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: background 2s;
+    transition: background 2s;
+}
+
+
+/* затемнення */
+
+#levus-slider article::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+/* активний слайд */
+
+#levus-slider article.show {
+    visibility: visible;
+    -webkit-animation: background-show 3s linear forwards 0s;
+    animation: background-show 3s linear forwards 0s;
+}
+
+
+/* //////////////
+  контент на слайді
+  ////////////// */
+
+.levus-content {
+    width: 1200px;
+    height: 530px;
+    padding: 100px 0;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-areas: 'levus-p1 levus-img' 'levus-p2 levus-img' 'levus-p3 levus-img'
+}
+
+@media(max-width: 1250px) {
+    .levus-content {
+        width: 95%;
+        padding: 10px;
+    }
+}
+
+@media(max-width: 991px) {
+    .levus-content {
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 'levus-p1' 'levus-p2' 'levus-p3' 'levus-img'
+    }
+}
+
+
+/* ////////////
+  блоки на слайді 
+  //////////// */
+
+
+/* картинка знизу*/
+
+.levus-content img {
+    max-width: 100% !important;
+    height: auto !important;
+    grid-area: levus-img;
+    -webkit-transform: translateY(200%);
+    transform: translateY(200%);
+}
+
+@media(max-width: 991px) {
+    .levus-content img {
+        margin: auto;
+    }
+}
+
+
+/* 1 текст зліва */
+
+.levus-content p:nth-child(1) {
+    margin: 0 50px 5px;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--light);
+    grid-area: levus-p1;
+    align-self: end;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+}
+
+@media(max-width:776px) {
+    .levus-content p:nth-child(1) {
+        font-size: 26px;
+        line-height: 1;
+        margin: 0 10px;
+    }
+}
+
+
+/* 2 текст зліва */
+
+.levus-content p:nth-child(2) {
+    margin: 0 50px 5px;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--light);
+    grid-area: levus-p2;
+    align-self: center;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+}
+
+@media(max-width:776px) {
+    .levus-content p:nth-child(2) {
+        font-size: 26px;
+        line-height: 1;
+        margin: 0 10px;
+    }
+}
+
+
+/* 3 текст зліва */
+
+.levus-content p:nth-child(3) {
+    margin: 0 50px 5px;
+    font-size: 20px;
+    color: var(--light);
+    grid-area: levus-p3;
+    align-self: start;
+    -webkit-transform: translateX(-110%);
+    transform: translateX(-110%);
+}
+
+@media(max-width:776px) {
+    .levus-content p:nth-child(3) {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+}
+
+
+/* ///////////////////
+  блоки активного слайда
+  /////////////////// */
+
+.show .levus-content img {
+    -webkit-animation: img-0 1500ms linear forwards 1s;
+    animation: img-0 1500ms linear forwards 1s;
+}
+
+.show .levus-content p:nth-child(1) {
+    -webkit-animation: p-1 500ms linear forwards 1500ms;
+    animation: p-1 500ms linear forwards 1500ms;
+}
+
+.show .levus-content p:nth-child(2) {
+    -webkit-animation: p-2 500ms linear forwards 2s;
+    animation: p-2 500ms linear forwards 2s;
+}
+
+.show .levus-content p:nth-child(3) {
+    -webkit-animation: p-3 1500ms linear forwards 2500ms;
+    animation: p-3 1500ms linear forwards 2500ms;
+}
+
+
+/* /////////////
+  анімація слайдів
+  ///////////// */
+
+
+/* анімація фону*/
+
+@-webkit-keyframes background-show {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {}
+}
+
+@keyframes background-show {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {}
+}
+
+
+/* анімація картинки */
+
+@-webkit-keyframes img-0 {
+    0% {
+        -webkit-transform: translateY(200%);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes img-0 {
+    0% {
+        transform: translateY(200%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* анімація 1 параграфа*/
+
+@-webkit-keyframes p-1 {
+    0% {
+        -webkit-transform: scaleY(0);
+    }
+    50% {
+        -webkit-transform: scaleY(-1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+    }
+}
+
+@keyframes p-1 {
+    0% {
+        transform: scaleY(0);
+    }
+    50% {
+        transform: scaleY(-1);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+
+/* анімація 2 параграфа*/
+
+@-webkit-keyframes p-2 {
+    0% {
+        -webkit-transform: scaleY(0);
+    }
+    50% {
+        -webkit-transform: scaleY(-1);
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+    }
+}
+
+@keyframes p-2 {
+    0% {
+        transform: scaleY(0);
+    }
+    50% {
+        transform: scaleY(-1);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+
+/* анімація 3 параграфа*/
+
+@-webkit-keyframes p-3 {
+    0% {
+        -webkit-transform: translateX(-110%);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+    }
+}
+
+@keyframes p-3 {
+    0% {
+        transform: translateX(-110%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+:root {
+    --dark: #1f1f1f;
+    --gray: #565656;
+    --light: #fff;
+    --red: #dc3545;
+    /**/
+    --original: rgba(243, 102, 57, 1);
+    --hover: rgba(180, 84, 53, 1);
+    --ivory: rgba(255, 255, 240, 1);
+    --white: rgba(250, 250, 250, 1);
+    --light-gray: rgba(240, 240, 240, 1);
+    --dark: rgba(51, 51, 51, 1);
+    --disabled: #999;
+}
+
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+#header {
+    /* background: var(--light); */
+    display: flex;
+    align-items: center;
+    height: 80px;
+    /* bugfix */
+    position: relative;
+    top: -1px;
+}
+
+#levus-menu {
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+}
+
+@media(max-width: 1240px) {
+    #levus-menu {
+        width: 100%;
+    }
+}
