@@ -147,7 +147,7 @@
     display: block;
     position: absolute;
     top: 32px;
-    right: 30px;
+    right: 20px;
     z-index: 9;
     -webkit-transition: background .5s;
     transition: background .5s;

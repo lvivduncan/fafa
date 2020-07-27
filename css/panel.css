@@ -22,7 +22,7 @@
     #panel {
         position: absolute;
         top: 24px;
-        left: 10px;
+        left: 0;
         margin-left: 0;
     }
 }
