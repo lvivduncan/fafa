@@ -12,6 +12,9 @@
     --light-gray: rgba(240, 240, 240, 1);
     --dark: rgba(51, 51, 51, 1);
     --disabled: #999;
+    --opacity1: rgba(0, 0, 0, .1);
+    --opacity3: rgba(0, 0, 0, .3);
+    --opacity5: rgba(0, 0, 0, .5);
 }
 
 *,
@@ -28,24 +31,6 @@ body {
     font-size: 16px;
 }
 
-#header {
-    /* background: var(--light); */
-    display: flex;
-    align-items: center;
-    height: 80px;
-    /* bugfix */
-    position: relative;
-    top: -1px;
-}
-
-#levus-menu {
-    width: 1200px;
-    height: 100%;
-    margin: auto;
-}
-
-@media(max-width: 1240px) {
-    #levus-menu {
-        width: 100%;
-    }
+a {
+    color: var(--dark);
 }

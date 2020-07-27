@@ -1,0 +1,22 @@
+#header {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    position: relative;
+    top: -1px;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    -webkit-transition: background .5s;
+    transition: background .5s;
+}
+
+#header.header-white {
+    background: var(--light);
+}
+
+header #levus-menu.desktop ul {
+    display: flex;
+    position: relative;
+}

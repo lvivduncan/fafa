@@ -1,0 +1,15 @@
+#logo {
+    width: 160px;
+    height: 80px;
+    display: inline-block;
+    background: url('../images/logo.png') no-repeat;
+}
+
+@media(max-width: 1240px) {
+    #logo {
+        position: absolute;
+        left: 50%;
+        z-index: 12;
+        margin-left: -80px;
+    }
+}

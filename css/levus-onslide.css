@@ -45,12 +45,6 @@
     left: 50px;
 }
 
-@media(max-width: 776px) {
-    #levus-left {
-        display: none;
-    }
-}
-
 
 /* вліво */
 
@@ -74,12 +68,6 @@
     right: 50px;
 }
 
-@media(max-width: 776px) {
-    #levus-right {
-        display: none;
-    }
-}
-
 #levus-right::before {
     content: '';
     height: 16px;
@@ -101,6 +89,14 @@
 #levus-right.hide {
     -webkit-transform: translateX(150px);
     transform: translateX(150px);
+}
+
+@media(max-width: 776px) {
+    #levus-left.hide,
+    #levus-right.hide {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 }
 
 
@@ -416,5 +412,14 @@
     }
     100% {
         transform: translateX(0);
+    }
+}
+
+
+/* розпорка на мобільному */
+
+@media(max-width:1240px) {
+    #levus-slider {
+        margin-top: 80px
     }
 }

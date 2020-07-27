@@ -5,12 +5,19 @@ const logo = document.querySelector('#logo');
 window.addEventListener('scroll', () => {
     if (window.pageYOffset > 20) {
         navigation.classList.add('header-white');
-        a.forEach(item => item.classList.add('link-white'));
+    } else if (window.innerWidth < 1240) {
+        navigation.classList.add('header-white');
     } else {
         navigation.removeAttribute('class');
-        a.forEach(item => item.removeAttribute('class'));
     }
 });
+
+window.innerWidth < 1240 ? navigation.classList.add('header-white') : navigation.removeAttribute('class');
+
+window.addEventListener('resize', () => {
+    window.innerWidth < 1240 ? navigation.classList.add('header-white') : navigation.removeAttribute('class');
+});
+
 
 
 // https://github.com/lvivduncan/levus-nav
@@ -40,7 +47,7 @@ window.addEventListener('scroll', () => {
         changeMenu();
 
         // додаємо елемент на сторінку
-        menu.append(wrapper);
+        menu.prepend(wrapper);
 
         // розкрити меню на мобільному
         wrapper.addEventListener('click', showMenu);
@@ -52,7 +59,7 @@ window.addEventListener('scroll', () => {
 
         // перемикаємо меню
         function changeMenu() {
-            if (window.innerWidth < 1200) {
+            if (window.innerWidth < 1240) {
                 menu.classList.remove('desktop');
                 menu.classList.add('mobile');
             } else {
@@ -100,51 +107,51 @@ class LevusOnslide {
 
     // клік на кпоку вправо/вліво
     click() {
-        // клік на ліву
-        this.left.addEventListener('click', () => {
-            setTimeout(() => {
-                this.slides.forEach(slide => slide.removeAttribute('class'));
-                this.cnt < this.length ? this.cnt++ : this.cnt = 0;
-                this.slides[this.cnt].classList.add('show');
-            }, 500);
-        });
+            // клік на ліву
+            this.left.addEventListener('click', () => {
+                setTimeout(() => {
+                    this.slides.forEach(slide => slide.removeAttribute('class'));
+                    this.cnt < this.length ? this.cnt++ : this.cnt = 0;
+                    this.slides[this.cnt].classList.add('show');
+                }, 500);
+            });
 
-        // клік на праву кнопку
-        this.right.addEventListener('click', () => {
-            setTimeout(() => {
-                this.slides.forEach(slide => slide.removeAttribute('class'));
-                this.cnt === 0 ? this.cnt = this.length : this.cnt--;
-                this.slides[this.cnt].classList.add('show');
-            }, 500);
-        });
-    }
+            // клік на праву кнопку
+            this.right.addEventListener('click', () => {
+                setTimeout(() => {
+                    this.slides.forEach(slide => slide.removeAttribute('class'));
+                    this.cnt === 0 ? this.cnt = this.length : this.cnt--;
+                    this.slides[this.cnt].classList.add('show');
+                }, 500);
+            });
+        }
+        /* 
+            arrow() {
+                // ховаємо
+                this.left.classList.add('hide');
+                this.right.classList.add('hide');
 
-    arrow() {
-        // ховаємо
-        this.left.classList.add('hide');
-        this.right.classList.add('hide');
+                // показати стрілки при наведенні на слайдер
+                this.slider.addEventListener('mouseover', () => {
+                    this.left.removeAttribute('class');
+                    this.right.removeAttribute('class');
+                });
 
-        // показати стрілки при наведенні на слайдер
-        this.slider.addEventListener('mouseover', () => {
-            this.left.removeAttribute('class');
-            this.right.removeAttribute('class');
-        });
+                // сховати стрілки
+                this.slider.addEventListener('mouseout', () => {
+                    this.left.classList.add('hide');
+                    this.right.classList.add('hide');
+                });
+            }
 
-        // сховати стрілки
-        this.slider.addEventListener('mouseout', () => {
-            this.left.classList.add('hide');
-            this.right.classList.add('hide');
-        });
-    }
-
-    autoScroll() {
-        setInterval(() => {
-            this.slides.forEach(slide => slide.removeAttribute('class'));
-            this.cnt < this.length ? this.cnt++ : this.cnt = 0;
-            this.slides[this.cnt].classList.add('show');
-        }, 8000);
-    }
-
+            autoScroll() {
+                setInterval(() => {
+                    this.slides.forEach(slide => slide.removeAttribute('class'));
+                    this.cnt < this.length ? this.cnt++ : this.cnt = 0;
+                    this.slides[this.cnt].classList.add('show');
+                }, 8000);
+            }
+         */
     init() {
         this.click();
 
@@ -152,10 +159,10 @@ class LevusOnslide {
         this.first.classList.add('show');
 
         // показуємо стрілочки при завантаженні
-        this.arrow();
+        // this.arrow();
 
         // автоскрол на екрані менше 1200
-        window.addEventListener('resize', () => window.innerWidth < 1200 && this.autoScroll());
+        // window.addEventListener('resize', () => window.innerWidth < 1200 && this.autoScroll());
     }
 }
 
