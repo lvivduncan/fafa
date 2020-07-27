@@ -19,7 +19,7 @@
 #levus-menu.desktop a {
     display: block;
     color: var(--light);
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: none;
     padding: 10px 20px;
     -webkit-transition: background .5s;
@@ -79,6 +79,7 @@
 }
 
 #levus-menu.desktop li ul a {
+    font-size: 14px;
     z-index: 7;
     padding: 10px 20px;
     color: var(--dark);

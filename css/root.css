@@ -7,7 +7,7 @@
     --original: rgba(243, 102, 57, 1);
     --hover: rgba(180, 84, 53, 1);
     --ivory: rgba(255, 255, 240, 1);
-    --white: rgba(250, 250, 250, 1);
+    /* --white: rgba(250, 250, 250, 1); */
     --light-gray: rgba(240, 240, 240, 1);
     --dark: rgba(51, 51, 51, 1);
     --disabled: #999;
@@ -32,4 +32,134 @@ body {
 
 a {
     color: var(--dark);
+}
+
+
+/* font-awesome */
+
+.fa:before {
+    font-size: 16px;
+    font-family: 'FontAwesome';
+}
+
+
+/**/
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 30px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/**/
+
+.pt-100 {
+    padding-top: 100px;
+}
+
+.pb-100 {
+    padding-bottom: 100px;
+}
+
+
+/**/
+
+.container {
+    width: 1200px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+@media(max-width: 1240px) {
+    .container {
+        width: 95%;
+        padding: 20px 0;
+    }
+}
+
+.container-fluid {
+    margin: 0 10px;
+    padding: 50px 0;
+}
+
+@media(max-width: 1240px) {
+    .container-fluid {
+        padding: 20px 0;
+    }
+}
+
+.container h3 {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: normal;
+    text-shadow: 2px 2px 2px #ccc;
+    line-height: 56px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.container-fluid h3 {
+    width: 1200px;
+    margin: auto;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: normal;
+    text-shadow: 2px 2px 2px #ccc;
+    line-height: 56px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+@media(max-width: 1240px) {
+    .container-fluid h3 {
+        width: 95%;
+    }
+}
+
+.container h3:before,
+.container-fluid h3:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100px;
+    background-color: var(--hover);
+    bottom: -20px;
+    left: 0;
+}
+
+.container p,
+.container-fluid p {
+    margin: 0 0 30px;
+    font-style: italic;
+}
+
+.background-ivory {
+    background: var(--ivory);
+}
+
+.background-robot {
+    background: url('../images/robots-background.jpg');
+}
+
+.background-fixed {
+    background-attachment: fixed;
+}
+
+.background-auto {
+    background: url('../images/background-auto.jpg') no-repeat;
+    background-size: cover;
 }
