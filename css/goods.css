@@ -112,9 +112,10 @@
 .goods .buttons button {
     cursor: pointer;
     padding: 10px;
-    border: none;
+    /* border: none; */
     color: var(--original);
-    outline: 1px solid var(--original);
+    border: 1px solid var(--original);
+    border-radius: 5px;
     background: var(--light);
     -webkit-transition: background .5s;
     transition: background .5s;
@@ -122,7 +123,7 @@
 
 .goods .buttons button:hover {
     background: var(--original);
-    outline-color: var(--light);
+    border-color: var(--light);
     color: var(--original);
 }
 
