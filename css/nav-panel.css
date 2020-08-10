@@ -1,0 +1,42 @@
+#nav-panel {
+    background: var(--light-gray);
+}
+
+#nav-panel .container {
+    padding: 10px;
+    display: flex;
+}
+
+#nav-panel a {
+    font-size: 13px;
+    text-decoration: none;
+    padding: 0 10px;
+    border-left: 1px solid var(--dark);
+}
+
+@media(max-width: 500px) {
+    #nav-panel a {
+        border: none;
+    }
+}
+
+#nav-panel a:hover {
+    color: var(--red);
+}
+
+#nav-panel a:first-child {
+    border: none;
+}
+
+#lang {
+    margin-right: auto;
+}
+
+#lang a {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#top-links {
+    margin-left: auto;
+}

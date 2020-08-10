@@ -1,0 +1,52 @@
+#top-adverty {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--light);
+    background: var(--original);
+    transform: scaleY(0);
+    transition: transform .5s;
+    transform-origin: top;
+    max-height: 0;
+}
+
+#top-adverty p {
+    margin: 0;
+    padding: 10px;
+}
+
+#top-adverty a {
+    text-decoration: none;
+    color: var(--light);
+    transition: font-weight .5s;
+}
+
+#top-adverty.show {
+    transform: scaleY(1);
+    max-height: 100%;
+}
+
+
+/* кнопка закриття */
+
+#top-adverty i {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 1;
+    cursor: pointer;
+    transition: .5s;
+    transform: translateY(-50%);
+}
+
+#top-adverty i::after {
+    content: '+';
+    font-size: 50px;
+    color: var(--light);
+    display: inline-block;
+    transition: .5s;
+    transform: rotate(45deg);
+}
+
+#top-adverty i:hover::after {
+    transform: rotate(135deg);
+}
