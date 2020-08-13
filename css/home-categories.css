@@ -5,7 +5,7 @@
 #home-categories .container {
     width: 100%;
     display: grid;
-    grid-gap: 3px;
+    /* grid-gap: 3px; */
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 'a1 a2 a3 a3' 'a1 a4 a4 a7' 'a5 a5 a6 a7' 'a8 a9 a10 a10' 'a8 a11 a11 a14' 'a12 a12 a13 a14';
 }

@@ -11,6 +11,18 @@
     grid-gap: 10px;
 }
 
+@media(max-width: 996px) {
+    #footer .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 500px) {
+    #footer .container {
+        grid-template-columns: 1fr;
+    }
+}
+
 #footer a {
     color: var(--light);
     text-decoration: none;
