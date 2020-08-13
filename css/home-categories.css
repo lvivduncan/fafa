@@ -1,0 +1,132 @@
+#home-categories {
+    margin: 50px 0;
+}
+
+#home-categories .container {
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 'a1 a2 a3 a3' 'a1 a4 a4 a7' 'a5 a5 a6 a7' 'a8 a9 a10 a10' 'a8 a11 a11 a14' 'a12 a12 a13 a14';
+}
+
+#home-categories .container a {
+    background-size: cover!important;
+    min-height: 300px;
+    padding: 10px;
+}
+
+#home-categories .container a:nth-child(1) {
+    grid-area: a1;
+}
+
+#home-categories .container a:nth-child(2) {
+    grid-area: a2;
+}
+
+#home-categories .container a:nth-child(3) {
+    grid-area: a3;
+}
+
+#home-categories .container a:nth-child(4) {
+    grid-area: a4;
+}
+
+#home-categories .container a:nth-child(5) {
+    grid-area: a5;
+}
+
+#home-categories .container a:nth-child(6) {
+    grid-area: a6;
+}
+
+#home-categories .container a:nth-child(7) {
+    grid-area: a7;
+}
+
+#home-categories .container a:nth-child(8) {
+    grid-area: a8;
+}
+
+#home-categories .container a:nth-child(9) {
+    grid-area: a9;
+}
+
+#home-categories .container a:nth-child(10) {
+    grid-area: a10;
+}
+
+#home-categories .container a:nth-child(11) {
+    grid-area: a11;
+}
+
+#home-categories .container a:nth-child(12) {
+    grid-area: a12;
+}
+
+#home-categories .container a:nth-child(13) {
+    grid-area: a13;
+}
+
+#home-categories .container a:nth-child(14) {
+    grid-area: a14;
+}
+
+
+/* тимчасово */
+
+#home-categories .container a:nth-child(1) {
+    background: url('https://picsum.photos/id/29/530/530');
+}
+
+#home-categories .container a:nth-child(2) {
+    background: url('https://picsum.photos/id/30/530/530');
+}
+
+#home-categories .container a:nth-child(3) {
+    background: url('https://picsum.photos/id/32/530/530');
+}
+
+#home-categories .container a:nth-child(4) {
+    background: url('https://picsum.photos/id/33/530/530');
+}
+
+#home-categories .container a:nth-child(5) {
+    background: url('https://picsum.photos/id/34/530/530');
+}
+
+#home-categories .container a:nth-child(6) {
+    background: url('https://picsum.photos/id/35/530/530');
+}
+
+#home-categories .container a:nth-child(7) {
+    background: url('https://picsum.photos/id/36/530/530');
+}
+
+#home-categories .container a:nth-child(8) {
+    background: url('https://picsum.photos/id/37/530/530');
+}
+
+#home-categories .container a:nth-child(9) {
+    background: url('https://picsum.photos/id/38/530/530');
+}
+
+#home-categories .container a:nth-child(10) {
+    background: url('https://picsum.photos/id/39/530/530');
+}
+
+#home-categories .container a:nth-child(11) {
+    background: url('https://picsum.photos/id/40/530/530');
+}
+
+#home-categories .container a:nth-child(12) {
+    background: url('https://picsum.photos/id/41/530/530');
+}
+
+#home-categories .container a:nth-child(13) {
+    background: url('https://picsum.photos/id/42/530/530');
+}
+
+#home-categories .container a:nth-child(14) {
+    background: url('https://picsum.photos/id/43/530/530');
+}

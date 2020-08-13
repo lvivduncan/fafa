@@ -1,0 +1,110 @@
+#levus-menu.desktop ul {
+    display: flex;
+    position: relative;
+}
+
+#levus-menu.desktop li {
+    display: block;
+    position: relative;
+    background: var(--dark);
+}
+
+#levus-menu.desktop a {
+    display: block;
+    color: var(--light);
+    background: var(--dark);
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px 20px;
+    -webkit-transition: background .5s;
+    transition: background .5s;
+}
+
+#levus-menu.desktop a:hover {
+    background: var(--dark);
+}
+
+#levus-menu.desktop ul a {
+    position: relative;
+    z-index: 8;
+    padding: 30px 20px;
+}
+
+
+/* підкреслення */
+
+#levus-menu.desktop ul a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--red);
+}
+
+
+/* 2 рівень */
+
+#levus-menu.desktop .parent ul {
+    display: block;
+    width: 230px;
+    position: absolute;
+    /**/
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    /**/
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transition: transform .5s;
+    transition: transform .5s;
+    /**/
+    z-index: 7;
+    border: 1px solid #292929;
+    border-radius: 3px;
+}
+
+#levus-menu.desktop .parent:hover ul {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+}
+
+#levus-menu.desktop li ul a {
+    z-index: 7;
+    padding: 10px 20px;
+    color: #bbb;
+    -webkit-transition: color .5s;
+    transition: color .5s;
+}
+
+#levus-menu.desktop li ul a:hover::after {
+    content: '';
+    display: none;
+}
+
+#levus-menu.desktop li ul a:hover {
+    color: var(--red);
+}
+
+
+/* 3 рівень */
+
+#levus-menu.desktop .parent:hover li ul {
+    border: 1px solid #292929;
+    border-radius: 3px;
+    /**/
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+}
+
+#levus-menu.desktop .parent li ul {
+    -webkit-transition: transform .5s;
+    transition: transform .5s;
+}
+
+#levus-menu.desktop .parent li:hover ul {
+    top: 0;
+    -webkit-transform: translateX(95%);
+    transform: translateX(95%);
+}

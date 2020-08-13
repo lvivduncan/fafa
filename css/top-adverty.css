@@ -2,7 +2,7 @@
     text-align: center;
     text-transform: uppercase;
     color: var(--light);
-    background: var(--original);
+    background: var(--orange);
     transform: scaleY(0);
     transition: transform .5s;
     transform-origin: top;

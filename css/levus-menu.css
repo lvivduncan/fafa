@@ -1,0 +1,22 @@
+#nav {
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    height: 80px;
+    /* bugfix */
+    /* position: relative; */
+    /* top: -1px; */
+}
+
+#levus-menu {
+    height: 100%;
+    width: 100%;
+    /* background: var(--dark); */
+    /* box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.45); */
+}
+
+@media (max-width: 1240px) {
+    #levus-menu {
+        width: 100%;
+    }
+}
