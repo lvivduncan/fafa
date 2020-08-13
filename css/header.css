@@ -1,5 +1,6 @@
 #header {
     padding: 20px 0;
+    overflow: hidden;
 }
 
 #header .container {
@@ -19,6 +20,15 @@
 #search input:focus {
     border-color: var(--red);
     background: none;
+}
+
+
+/* tmp */
+
+@media(max-width: 996px) {
+    #search {
+        display: none;
+    }
 }
 
 #phone a {
@@ -58,6 +68,12 @@
     100% {
         border-color: var(--red);
         color: var(--red);
+    }
+}
+
+@media(max-width: 776px) {
+    #callback {
+        display: none;
     }
 }
 

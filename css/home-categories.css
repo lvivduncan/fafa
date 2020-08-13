@@ -1,18 +1,32 @@
 #home-categories {
-    margin: 50px 0;
+    /* margin: 50px 0; */
 }
 
 #home-categories .container {
     width: 100%;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 3px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 'a1 a2 a3 a3' 'a1 a4 a4 a7' 'a5 a5 a6 a7' 'a8 a9 a10 a10' 'a8 a11 a11 a14' 'a12 a12 a13 a14';
 }
 
+@media(max-width: 996px) {
+    #home-categories .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 'a1 a2' 'a3 a4' 'a5 a6' 'a7 a8' 'a9 a10' 'a11 a12' 'a13 a14';
+    }
+}
+
+@media(max-width: 500px) {
+    #home-categories .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'a1' 'a2' 'a3' 'a4' 'a5' 'a6' 'a7' 'a8' 'a9' 'a10' 'a11' 'a12' 'a13' 'a14';
+    }
+}
+
 #home-categories .container a {
     background-size: cover!important;
-    min-height: 300px;
+    min-height: 220px;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -24,13 +38,21 @@
     text-transform: uppercase;
 }
 
+@media(max-width: 776px) {
+    #home-categories .container a {
+        min-height: 100px;
+    }
+}
+
 
 /* текст */
 
 #home-categories .container a p {
+    margin: 0;
     position: relative;
     z-index: 2;
     color: var(--light);
+    text-shadow: 1px 1px 1px var(--dark);
 }
 
 #home-categories .container a::before {
@@ -48,6 +70,7 @@
 #home-categories .container a:hover p {
     color: var(--dark);
     transition: color .5s;
+    text-shadow: 1px 1px 1px var(--light);
 }
 
 #home-categories .container a:hover::before {

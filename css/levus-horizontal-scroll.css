@@ -1,0 +1,241 @@
+.levus-horizontal-scroll {
+    overflow: hidden;
+    padding-top: 50px;
+    position: relative;
+}
+
+.levus-horizontal-scroll ul {
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    position: relative;
+    left: -25%;
+}
+
+@media (max-width: 996px) {
+    .levus-horizontal-scroll ul {
+        left: -33.333333%;
+    }
+}
+
+@media (max-width: 776px) {
+    .levus-horizontal-scroll ul {
+        left: -50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .levus-horizontal-scroll ul {
+        left: -100%;
+    }
+}
+
+
+/* addClass/removeClass */
+
+.to-left {
+    transform: translateX(25%);
+}
+
+.to-right {
+    transform: translateX(-25%);
+}
+
+@media (max-width: 996px) {
+    .to-left {
+        transform: translateX(33.333333%);
+    }
+    .to-right {
+        transform: translateX(-33.333333%);
+    }
+}
+
+@media (max-width: 776px) {
+    .to-left {
+        transform: translate(50%);
+    }
+    .to-right {
+        transform: translate(-50%);
+    }
+}
+
+@media (max-width: 500px) {
+    .to-left {
+        transform: translateX(100%);
+    }
+    .to-right {
+        transform: translateX(-100%);
+    }
+}
+
+.levus-horizontal-scroll li {
+    display: inline-block;
+    width: 25%;
+}
+
+@media (max-width: 996px) {
+    .levus-horizontal-scroll li {
+        width: 33.333333%;
+    }
+}
+
+@media (max-width: 776px) {
+    .levus-horizontal-scroll li {
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .levus-horizontal-scroll li {
+        width: 100%;
+    }
+}
+
+.levus-horizontal-scroll img {
+    width: 100%;
+    display: block;
+}
+
+.levus-horizontal-scroll .left,
+.levus-horizontal-scroll .right {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #f4f4f4;
+    position: absolute;
+    top: 5px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.levus-horizontal-scroll .left {
+    right: 50px;
+}
+
+.levus-horizontal-scroll .left::before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAARElEQVR4Ae3OAQYAIBQE0Y/u21H2IB2yYEGAFEvzGACmAADvdRczM12PmXEjbaYxwwwzh7QNqez3KaaYYkoVQu4GAMACdpNBa8xOosUAAAAASUVORK5CYII=") center center no-repeat;
+}
+
+.levus-horizontal-scroll .right {
+    right: 0;
+}
+
+.levus-horizontal-scroll .right::before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAS0lEQVR4Ae3OsQ0AEBQGYYXSrkZ5gxjDYJA8jVKIv7gvuf4CAOCe7MnMNE9iqo6a0lRiiimmPoijsg0ZM8wwc0hqZjKlmcU8AMBLHcNiQx9bPHBBAAAAAElFTkSuQmCC") center center no-repeat;
+}
+
+
+/* add */
+
+.levus-horizontal-scroll li {
+    position: relative;
+}
+
+.levus-horizontal-scroll .caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--opacity5);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.levus-horizontal-scroll .caption h3 {
+    white-space: pre-wrap;
+    color: var(--light);
+    text-shadow: 1px 1px 1px var(--dark);
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+@media(max-width: 776px) {
+    .levus-horizontal-scroll .caption h3 {
+        font-size: 18px;
+    }
+}
+
+.levus-horizontal-scroll .caption h3 a {
+    color: var(--light);
+    text-decoration: none;
+}
+
+.levus-horizontal-scroll .caption .price {
+    color: var(--light);
+    text-shadow: 1px 1px 1px var(--dark);
+}
+
+.levus-horizontal-scroll .caption .new {
+    color: var(--light);
+    font-size: 24px;
+}
+
+.levus-horizontal-scroll .caption .old {
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+
+/* кнопки */
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+
+.buttons button {
+    padding: 10px;
+    transition: opacity .5s;
+    cursor: pointer;
+    color: var(--light);
+    background: var(--orange);
+    border: none;
+    transition: color .5s, background .5s;
+}
+
+.levus-horizontal-scroll .caption .buttons {
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.levus-horizontal-scroll .caption:hover .buttons {
+    opacity: 1;
+}
+
+@media(max-width: 776px) {
+    .levus-horizontal-scroll .caption .buttons {
+        opacity: 1;
+    }
+}
+
+.levus-horizontal-scroll .caption button:hover {
+    background: var(--green);
+}
+
+
+/* маркер знижки */
+
+.levus-horizontal-scroll .marker {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    Z-index: 3;
+    font-size: 40px;
+    color: var(--light);
+}

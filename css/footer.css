@@ -1,0 +1,62 @@
+#footer {
+    background: var(--dark);
+    color: var(--light);
+    margin-top: 100px;
+    padding: 50px 0;
+}
+
+#footer .container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+
+#footer a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#footer a:hover {
+    color: var(--orange);
+}
+
+#footer ul,
+#footer li {
+    display: block;
+}
+
+#quick-contacts {
+    background: var(--gray);
+    color: var(--light);
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+#quick-contacts h6 {
+    font-size: 20px;
+}
+
+.quick-callback a,
+.quick-callback a:hover {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 3px solid var(--light);
+    color: var(--light);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.social .footer__svg-icon {
+    width: 32px;
+    height: 32px;
+    fill: var(--light);
+}

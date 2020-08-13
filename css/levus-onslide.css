@@ -165,7 +165,8 @@
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr auto 1fr;
-    grid-template-areas: 'levus-p1 levus-img' 'levus-p2 levus-img' 'levus-p3 levus-img'
+    grid-template-areas: 'levus-p1 levus-img' 'levus-p2 levus-img' 'levus-p3 levus-img';
+    text-shadow: 1px 1px 1px var(--dark);
 }
 
 @media(max-width: 1250px) {

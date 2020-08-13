@@ -1,0 +1,21 @@
+#feedback form {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 2fr repeat(3, 1fr);
+}
+
+#feedback p {
+    text-align: right;
+    font-weight: 700;
+    color: var(--orange);
+    margin: 0;
+}
+
+#feedback input[type="text"] {
+    padding: 5px 10px;
+}
+
+#feedback input[type="submit"] {
+    padding: 5px 10px;
+    cursor: pointer;
+}

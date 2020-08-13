@@ -1,25 +1,26 @@
 @import url("//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 :root {
-    --dark: #1f1f1f;
+    /* --dark: #1f1f1f; */
     --gray: #565656;
     --light: #fff;
     --red: #dc3545;
     --orange: rgba(243, 102, 57, 1);
     --black: #000;
     --yellow: #ffd531;
-    /**/
-    --hover: rgba(180, 84, 53, 1);
-    --ivory: rgba(255, 255, 240, 1);
-    --light-gray: rgba(240, 240, 240, 1);
+    --green: green;
     --dark: rgba(51, 51, 51, 1);
-    --disabled: #999;
     --opacity1: rgba(0, 0, 0, 0.1);
     --opacity3: rgba(0, 0, 0, 0.3);
     --opacity5: rgba(0, 0, 0, 0.5);
     --transparent1: rgba(255, 255, 255, .1);
     --transparent3: rgba(255, 255, 255, .3);
     --transparent5: rgba(255, 255, 255, .5);
+    /**/
+    --hover: rgba(180, 84, 53, 1);
+    --ivory: rgba(255, 255, 240, 1);
+    --light-gray: rgba(240, 240, 240, 1);
+    --disabled: #999;
 }
 
 *,
@@ -36,7 +37,8 @@ body {
     font-size: 16px;
 }
 
-a {
+a,
+a:visited {
     color: var(--dark);
     text-decoration: underline;
 }
@@ -140,12 +142,35 @@ p {
     margin: 10px 20px;
     text-transform: uppercase;
     font-size: 24px;
+    color: var(--orange);
+    text-shadow: 1px 1px 1px var(--gray);
 }
 
 
 /* блок відступу вгорі/внизу */
 
-.section {
-    margin-top: 50px;
+.section100 {
+    margin-top: 100px;
     margin-bottom: 50px;
+}
+
+
+/* блок зі зміщеним заголовокм */
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+.section-title .title {
+    position: relative;
+    top: 50px;
+    margin: 0 20px 10px;
+}
+
+@media(max-width: 996px) {
+    .section-title .title {
+        position: relative;
+        top: 60px;
+        margin: 0 20px 0;
+    }
 }

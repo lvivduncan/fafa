@@ -1,5 +1,6 @@
 #nav-panel {
     background: var(--light-gray);
+    overflow: hidden;
 }
 
 #nav-panel .container {

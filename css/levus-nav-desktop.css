@@ -41,7 +41,8 @@
     display: block;
     height: 2px;
     width: 100%;
-    background: var(--red);
+    /* background: var(--red); */
+    background: var(--orange);
 }
 
 
@@ -51,15 +52,12 @@
     display: block;
     width: 230px;
     position: absolute;
-    /**/
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
-    /**/
     -webkit-transform: rotateX(90deg);
     transform: rotateX(90deg);
     -webkit-transition: transform .5s;
     transition: transform .5s;
-    /**/
     z-index: 7;
     border: 1px solid #292929;
     border-radius: 3px;
@@ -84,7 +82,8 @@
 }
 
 #levus-menu.desktop li ul a:hover {
-    color: var(--red);
+    /* color: var(--red); */
+    color: var(--light);
 }
 
 
@@ -93,7 +92,6 @@
 #levus-menu.desktop .parent:hover li ul {
     border: 1px solid #292929;
     border-radius: 3px;
-    /**/
     -webkit-transform: rotateX(90deg);
     transform: rotateX(90deg);
 }
