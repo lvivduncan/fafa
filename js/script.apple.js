@@ -51,10 +51,6 @@ topAdvertyClose.addEventListener("click", function () {
   // обгортка меню
   var menu = document.querySelector("#levus-menu"); // перевірка довжити усіх елементів
 
-//   var allLis = document.querySelectorAll("#levus-menu ul");
-//   console.log(allLis.children); 
-  // перевіряємо, чи таке меню існує
-
   if (menu != null) {
     // перемикаємо меню
     var changeMenu = function changeMenu() {

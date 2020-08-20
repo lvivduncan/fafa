@@ -118,6 +118,12 @@ img{
     }
 }
 
+@media (max-width: 776px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
 
 /* hide */
 
@@ -158,6 +164,12 @@ img{
     margin-bottom: 50px;
 }
 
+@media(max-width: 776px){
+    .section100{
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}
 
 /* блок зі зміщеним заголовокм */
 
