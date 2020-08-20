@@ -19,14 +19,13 @@
     position: absolute;
     top: 50%;
     margin-top: -25px;
-    /* border: 30px solid; */
     cursor: pointer;
     z-index: 3;
     opacity: .5;
     width: 40px;
     height: 40px;
     background: var(--light);
-    border-radius: 40px;
+    border-radius: 2px;
     -webkit-transition: all 500ms;
     transition: all 500ms;
     -webkit-transform: translate(0);
