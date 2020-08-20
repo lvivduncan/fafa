@@ -3,11 +3,11 @@
     overflow: hidden;
 }
 
-@media(max-width: 776px){
+/* @media(max-width: 776px){
     #header{
         padding: 0;
     }
-}
+} */
 
 #header .container {
     display: grid;
