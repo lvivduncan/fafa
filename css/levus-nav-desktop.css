@@ -60,7 +60,7 @@
     transition: transform .5s;
     z-index: 7;
     border: 1px solid #292929;
-    border-radius: 3px;
+    border-radius: var(--border-radius);
 }
 
 #levus-menu.desktop .parent:hover ul {
@@ -91,7 +91,7 @@
 
 #levus-menu.desktop .parent:hover li ul {
     border: 1px solid #292929;
-    border-radius: 3px;
+    border-radius: var(--border-radius);
     -webkit-transform: rotateX(90deg);
     transform: rotateX(90deg);
 }

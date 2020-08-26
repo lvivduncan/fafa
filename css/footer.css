@@ -39,8 +39,8 @@
 }
 
 #quick-contacts {
-    background: var(--gray);
-    color: var(--light);
+    color: var(--dark);
+    background: var(--light);
     padding: 20px;
     text-align: center;
     font-size: 14px;
@@ -50,15 +50,22 @@
     font-size: 20px;
 }
 
-.quick-callback a,
-.quick-callback a:hover {
+#quick-contacts .quick-callback a,
+#quick-contacts .quick-callback a:hover {
     display: inline-block;
     padding: 10px 15px;
-    border: 3px solid var(--light);
-    color: var(--light);
+    border: 3px solid var(--red);
+    color: var(--red);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 13px;
+    -webkit-transition: color .5s, border-color .5s;
+    transition: color .5s, border-color .5s;
+}
+
+#quick-contacts .quick-callback a:hover {
+    border-color: var(--dark);
+    color: var(--dark);
 }
 
 .social {
@@ -67,8 +74,14 @@
     justify-content: space-evenly;
 }
 
-.social .footer__svg-icon {
+.social .footer-icon {
     width: 32px;
     height: 32px;
-    fill: var(--light);
+    fill: var(--dark);
+    -webkit-transition: fill .5s;
+    transition: fill .5s;
+}
+
+.social .footer-icon:hover {
+    fill: var(--red);
 }

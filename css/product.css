@@ -1,0 +1,13 @@
+#product .container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
+
+#product-main{
+    border: 1px solid var(--dark);
+}
+
+#product-aside{
+    border: 1px solid var(--dark);
+}

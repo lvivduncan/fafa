@@ -25,7 +25,7 @@
     width: 40px;
     height: 40px;
     background: var(--light);
-    border-radius: 2px;
+    border-radius: var(--border-radius);
     -webkit-transition: all 500ms;
     transition: all 500ms;
     -webkit-transform: translate(0);

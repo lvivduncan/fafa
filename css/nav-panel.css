@@ -19,7 +19,7 @@
     font-size: 13px;
     text-decoration: none;
     padding: 0 10px;
-    border-left: 1px solid var(--dark);
+    border-left: 1px solid var(--gray);
 }
 
 @media(max-width: 500px) {

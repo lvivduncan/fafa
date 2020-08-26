@@ -102,7 +102,7 @@
     display: inline-block;
     height: 40px;
     width: 40px;
-    border-radius: 2px;
+    border-radius: var(--border-radius);
     background: #f4f4f4;
     position: absolute;
     top: 5px;
