@@ -41,7 +41,7 @@
 #top-adverty i::after {
     content: '+';
     font-size: 50px;
-    color: var(--light);
+    color: var(--white);
     display: inline-block;
     transition: .5s;
     transform: rotate(45deg);

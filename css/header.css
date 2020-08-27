@@ -71,22 +71,17 @@
 }
 
 #search input {
-    padding: 10px 5px;
-    border: 1px solid var(--gray);
-    border-radius: var(--border-radius);
-    outline: none;
     background: url('../images/search.png') right no-repeat;
-}
-
-#search input:focus {
-    border-color: var(--red);
-    background: none;
 }
 
 @media(max-width: 400px){
     #search input{
         width: 100%;
     }
+}
+
+#search input:focus {
+    background: none;
 }
 
 /**/
@@ -181,9 +176,10 @@
 }
 
 #basket button {
-    padding: 10px;
-    border: 1px solid var(--gray);
+    /* padding: 10px;
+    border: 1px solid var(--light-gray);
     border-radius: var(--border-radius);
-    outline: none;
-    cursor: pointer;
+    background: var(--light);
+    outline: none; */
 }
+

@@ -51,7 +51,7 @@
     margin: 0;
     position: relative;
     z-index: 2;
-    color: var(--light);
+    color: var(--white);
     text-shadow: 1px 1px 1px var(--dark);
 }
 
@@ -70,7 +70,7 @@
 #home-category .container a:hover p {
     color: var(--dark);
     transition: color .5s;
-    text-shadow: 1px 1px 1px var(--light);
+    text-shadow: 1px 1px 1px var(--white);
 }
 
 #home-category .container a:hover::before {

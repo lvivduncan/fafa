@@ -24,7 +24,7 @@
     opacity: .5;
     width: 40px;
     height: 40px;
-    background: var(--light);
+    background: var(--white);
     border-radius: var(--border-radius);
     -webkit-transition: all 500ms;
     transition: all 500ms;
@@ -213,7 +213,7 @@
     margin: 0 50px 5px;
     font-size: 40px;
     font-weight: bold;
-    color: var(--light);
+    color: var(--white);
     grid-area: levus-p1;
     align-self: end;
     -webkit-transform: scaleY(0);
@@ -235,7 +235,7 @@
     margin: 0 50px 5px;
     font-size: 40px;
     font-weight: bold;
-    color: var(--light);
+    color: var(--white);
     grid-area: levus-p2;
     align-self: center;
     -webkit-transform: scaleY(0);
@@ -256,7 +256,7 @@
 .levus-content p:nth-child(3) {
     margin: 0 50px 5px;
     font-size: 20px;
-    color: var(--light);
+    color: var(--white);
     grid-area: levus-p3;
     align-self: start;
     -webkit-transform: translateX(-110%);

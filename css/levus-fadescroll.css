@@ -1,0 +1,65 @@
+#levus-fadescroll {
+    overflow: hidden;
+    position: relative;
+}
+
+#levus-fadescroll div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-size: cover!important;
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+}
+
+#levus-fadescroll #left,
+#levus-fadescroll #right {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    cursor: pointer;
+    z-index: 3;
+    opacity: .5;
+    width: 40px;
+    height: 40px;
+    background: var(--light);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    border-radius: var(--border-radius);
+}
+
+#levus-fadescroll #left {
+    left: 50px;
+}
+
+#levus-fadescroll #right {
+    right: 50px;
+}
+
+#levus-fadescroll #left::before {
+    content: '';
+    height: 16px;
+    width: 16px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -8px auto auto -8px;
+    z-index: 4;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAARElEQVR4Ae3OAQYAIBQE0Y/u21H2IB2yYEGAFEvzGACmAADvdRczM12PmXEjbaYxwwwzh7QNqez3KaaYYkoVQu4GAMACdpNBa8xOosUAAAAASUVORK5CYII=') center center no-repeat;
+}
+
+#levus-fadescroll #right::before {
+    content: '';
+    height: 16px;
+    width: 16px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -8px auto auto -8px;
+    z-index: 4;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAS0lEQVR4Ae3OsQ0AEBQGYYXSrkZ5gxjDYJA8jVKIv7gvuf4CAOCe7MnMNE9iqo6a0lRiiimmPoijsg0ZM8wwc0hqZjKlmcU8AMBLHcNiQx9bPHBBAAAAAElFTkSuQmCC') center center no-repeat;
+}

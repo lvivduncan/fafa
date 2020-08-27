@@ -11,7 +11,7 @@
 
 #levus-menu.desktop a {
     display: block;
-    color: var(--light);
+    color: var(--white);
     background: var(--dark);
     font-size: 14px;
     text-decoration: none;
@@ -83,7 +83,7 @@
 
 #levus-menu.desktop li ul a:hover {
     /* color: var(--red); */
-    color: var(--light);
+    color: var(--white);
 }
 
 
