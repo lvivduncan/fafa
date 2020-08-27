@@ -1,0 +1,62 @@
+#category .container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 'category-aside category-main category-main category-main';
+    grid-gap: 20px;
+}
+
+@media(max-width: 996px){
+    #category .container{
+        grid-template-areas: 'category-aside category-main category-main';
+    }
+}
+
+@media(max-width: 996px){
+    #category .container{
+        grid-template-columns: 1fr;
+        grid-template-areas: 'category-main' 'category-aside';
+    }
+}
+
+/* Назва сторінки */
+#category .container h1,
+
+#category .container h2,
+#category .container h3,
+#category .container h4{
+    text-transform: none;
+    color: var(--dark);
+}
+
+#category-main{
+    grid-area: category-main;
+}
+
+/* опції сортування товарів */
+#category-sort-item{
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+}
+
+/* катгорії у сайдбарі */
+#category .container Saside{
+    grid-area: grid-area;
+}
+
+#category-aside{
+    margin: 0 0 20px;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+}
+
+#category-aside a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#category-aside a.active{
+    font-weight: bold;
+}

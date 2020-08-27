@@ -332,8 +332,8 @@ document.getElementById('levus-fadescroll') && fadeScroll('#levus-fadescroll', 6
     const tabLi = document.querySelectorAll('#product-description li');
     const tabPanes = document.querySelectorAll('#product-description .tab-pane');
 
-    tabLi[0].classList.add('active');
-    tabPanes[0].classList.add('active');
+    tabLi[0] && tabLi[0].classList.add('active');
+    tabPanes[0] && tabPanes[0].classList.add('active');
 
     // hide tabs
     tabPanes.forEach((item,i) => {

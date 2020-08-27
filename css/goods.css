@@ -1,0 +1,128 @@
+/**/
+.subcategory{
+    margin: 20px 0 20px 20px;
+}
+
+/* вивід товарів */
+.goods{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2px;
+}
+
+@media(max-width: 996px){
+    .goods{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width: 776px){
+    .goods{
+        grid-template-columns: 1fr;
+    }
+}
+
+.goods article{
+    position: relative;
+}
+
+/* add */
+.caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--opacity5);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.caption h3 {
+    white-space: pre-wrap;
+    color: var(--white);
+    text-shadow: 1px 1px 1px var(--dark);
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+@media(max-width: 776px) {
+    .caption h3 {
+        font-size: 18px;
+    }
+}
+
+.caption h3 a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.caption .price {
+    color: var(--white);
+    text-shadow: 1px 1px 1px var(--dark);
+}
+
+.caption .new {
+    color: var(--white);
+    font-size: 24px;
+}
+
+.caption .old {
+    text-decoration: line-through;
+    font-size: 14px;
+}
+
+
+/* кнопки */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+
+.buttons button {
+    padding: 10px;
+    transition: opacity .5s;
+    cursor: pointer;
+    color: var(--white);
+    background: var(--orange);
+    border: none;
+    white-space: nowrap;
+    border-radius: var(--border-radius);
+    transition: color .5s, background .5s;
+}
+
+.caption .buttons {
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.caption:hover .buttons {
+    opacity: 1;
+}
+
+@media(max-width: 776px) {
+    .caption .buttons {
+        opacity: 1;
+    }
+}
+
+.caption button:hover {
+    background: var(--green);
+}
+
+
+/* маркер знижки */
+.marker {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    Z-index: 3;
+    font-size: 40px;
+    color: var(--white);
+}

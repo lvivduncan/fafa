@@ -38,6 +38,15 @@
     right: 50px;
 }
 
+@media(max-width: 400px){
+    #levus-fadescroll #left {
+        left: 10px;
+    }
+    #levus-fadescroll #right {
+        right: 10px;
+    }
+}
+
 #levus-fadescroll #left::before {
     content: '';
     height: 16px;
